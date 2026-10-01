@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shah and Anchor Kutchhi Engineering College | SAKEC</title>
+  <meta name="description" content="Shah & Anchor Kutchhi Engineering College (SAKEC) - Premier engineering institute affiliated with University of Mumbai. NAAC 'A' Grade accredited.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* -------------------------------------------------------------
+       APPLE MONOCHROME DESIGN SYSTEM
+       Obsidian Dark & Ceramic Light
+    ------------------------------------------------------------- */
+    :root {
+      --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", -apple-system, sans-serif;
+      --bg-primary: #000000;
+      --bg-secondary: #0d0d0e;
+      --bg-card: rgba(22, 22, 24, 0.7);
+      --bg-card-hover: rgba(30, 30, 34, 0.85);
+      --border-subtle: rgba(255, 255, 255, 0.1);
+      --border-prominent: rgba(255, 255, 255, 0.2);
+      --text-primary: #f5f5f7;
+      --text-secondary: #86868b;
+      --text-muted: #53535a;
+      --accent-pill: #ffffff;
+      --accent-pill-text: #000000;
+      --glass-nav: rgba(0, 0, 0, 0.72);
+      --glow-color: rgba(255, 255, 255, 0.06);
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+      --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    [data-theme="light"] {
+      --bg-primary: #fbfbfd;
+      --bg-secondary: #f2f2f5;
+      --bg-card: rgba(255, 255, 255, 0.8);
+      --bg-card-hover: rgba(255, 255, 255, 0.98);
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-prominent: rgba(0, 0, 0, 0.18);
+      --text-primary: #1d1d1f;
+      --text-secondary: #6e6e73;
+      --text-muted: #86868b;
+      --accent-pill: #000000;
+      --accent-pill-text: #ffffff;
+      --glass-nav: rgba(251, 251, 253, 0.8);
+      --glow-color: rgba(0, 0, 0, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-stack);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.5;
+      overflow-x: hidden;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    /* -------------------------------------------------------------
+       NAVIGATION (Apple Frosted Glass)
+    ------------------------------------------------------------- */
+    .apple-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 52px;
+      background: var(--glass-nav);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      z-index: 1000;
+      border-bottom: 1px solid var(--border-subtle);
+      transition: var(--transition-smooth);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+
+    .brand-logo-img {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      object-fit: cover;
+      filter: contrast(1.2);
+      border: 1px solid var(--border-prominent);
+    }
+
+    .brand-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+    }
+
+    .nav-link {
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .theme-toggle-btn {
+      background: none;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      transition: var(--transition-smooth);
+    }
+
+    .theme-toggle-btn:hover {
+      border-color: var(--border-prominent);
+      transform: scale(1.05);
+    }
+
+    .nav-btn {
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 6px 14px;
+      background: var(--accent-pill);
+      color: var(--accent-pill-text);
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: var(--transition-smooth);
+    }
+
+    .nav-btn:hover {
+      opacity: 0.88;
+      transform: scale(1.02);
+    }
+
+    /* -------------------------------------------------------------
+       CONTAINERS & LAYOUT
+    ------------------------------------------------------------- */
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* -------------------------------------------------------------
+       HERO SECTION
+    ------------------------------------------------------------- */
+    .hero-section {
+      padding: 130px 24px 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      animation: fadeIn 0.8s ease backwards;
+    }
+
+    .pulse-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--text-primary);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--text-primary);
+      animation: pulseGlow 2s infinite ease-in-out;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: fadeIn 1s ease 0.1s backwards;
+    }
+
+    .hero-title span {
+      background: linear-gradient(180deg, var(--text-primary) 30%, var(--text-secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      font-weight: 400;
+      color: var(--text-secondary);
+      max-width: 660px;
+      margin: 0 auto 36px;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+      animation: fadeIn 1s ease 0.2s backwards;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 54px;
+      flex-wrap: wrap;
+      animation: fadeIn 1s ease 0.3s backwards;
+    }
+
+    .btn-pill {
+      font-size: 0.92rem;
+      font-weight: 500;
+      padding: 12px 28px;
+      border-radius: 9999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition-smooth);
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent-pill);
+      color: var(--accent-pill-text);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-primary);
+      border: 1px solid var(--border-prominent);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-2px);
+    }
+
+    /* -------------------------------------------------------------
+       HERO SHOWCASE (Sleek Apple Hardware/Architectural Mockup)
+    ------------------------------------------------------------- */
+    .hero-frame-container {
+      max-width: 1040px;
+      margin: 0 auto;
+      position: relative;
+      animation: fadeIn 1.2s ease 0.4s backwards;
+    }
+
+    .hero-frame {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid var(--border-prominent);
+      background: #080808;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 100px -20px var(--glow-color);
+      transition: var(--transition-smooth);
+    }
+
+    .hero-frame:hover {
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .hero-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      filter: contrast(1.05) grayscale(100%);
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+    }
+
+    .hero-frame:hover .hero-img {
+      transform: scale(1.02);
+    }
+
+    .hero-overlay-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 24px 32px;
+      background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.9) 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      color: #ffffff;
+      text-align: left;
+    }
+
+    .hero-overlay-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-overlay-subtitle {
+      font-size: 0.85rem;
+      color: #a1a1a6;
+      font-weight: 400;
+    }
+
+    .hero-view-badge {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* -------------------------------------------------------------
+       KEY METRICS (Apple Grid Counter)
+    ------------------------------------------------------------- */
+    .metrics-section {
+      padding: 70px 0;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      margin: 60px 0;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+
+    .metric-item {
+      padding: 16px;
+    }
+
+    .metric-value {
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .metric-label {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* -------------------------------------------------------------
+       SECTION HEADINGS
+    ------------------------------------------------------------- */
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 56px;
+    }
+
+    .section-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* -------------------------------------------------------------
+       APPLE BENTO GRID (Showcase Cards)
+    ------------------------------------------------------------- */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 24px;
+      margin-bottom: 90px;
+    }
+
+    .bento-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: var(--transition-smooth);
+      backdrop-filter: blur(12px);
+    }
+
+    .bento-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-prominent);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+    }
+
+    .bento-col-8 {
+      grid-column: span 8;
+    }
+
+    .bento-col-4 {
+      grid-column: span 4;
+    }
+
+    .bento-col-6 {
+      grid-column: span 6;
+    }
+
+    .bento-col-12 {
+      grid-column: span 12;
+    }
+
+    .card-media {
+      width: 100%;
+      height: 280px;
+      overflow: hidden;
+      position: relative;
+      background: #000;
+    }
+
+    .card-media-tall {
+      height: 340px;
+    }
+
+    .card-media-square {
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: contrast(1.1) grayscale(100%);
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .bento-card:hover .card-img {
+      transform: scale(1.04);
+    }
+
+    .card-logo-img {
+      max-width: 170px;
+      max-height: 170px;
+      object-fit: contain;
+      filter: contrast(1.2) drop-shadow(0 4px 20px rgba(255,255,255,0.08));
+      transition: transform 0.5s ease;
+    }
+
+    .bento-card:hover .card-logo-img {
+      transform: scale(1.06) rotate(1deg);
+    }
+
+    .card-content {
+      padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .card-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    .card-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .card-body {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 20px;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: gap 0.2s ease;
+    }
+
+    .card-link:hover {
+      gap: 10px;
+    }
+
+    /* -------------------------------------------------------------
+       ACADEMIC PROGRAMS (Horizontal Apple Grid)
+    ------------------------------------------------------------- */
+    .programs-section {
+      padding: 70px 0;
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .program-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      transition: var(--transition-smooth);
+    }
+
+    .program-card:hover {
+      border-color: var(--border-prominent);
+      background: var(--bg-card-hover);
+      transform: translateY(-3px);
+    }
+
+    .program-code {
+      font-family: monospace;
+      font-size: 0.72rem;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .program-name {
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+
+    .program-desc {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* -------------------------------------------------------------
+       PHOTO GALLERY MODAL (Lightbox)
+    ------------------------------------------------------------- */
+    .lightbox-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.92);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .lightbox-container {
+      max-width: 1000px;
+      width: 100%;
+      position: relative;
+    }
+
+    .lightbox-img {
+      width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      filter: contrast(1.1) grayscale(100%);
+    }
+
+    .lightbox-caption {
+      margin-top: 16px;
+      text-align: center;
+      color: #a1a1a6;
+      font-size: 0.95rem;
+    }
+
+    .lightbox-close-btn {
+      position: absolute;
+      top: -44px;
+      right: 0;
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 1.6rem;
+      cursor: pointer;
+      padding: 8px;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+
+    .lightbox-close-btn:hover {
+      opacity: 1;
+    }
+
+    /* -------------------------------------------------------------
+       FOOTER (Apple Style Minimalist)
+    ------------------------------------------------------------- */
+    .apple-footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-subtle);
+      padding: 56px 24px 40px;
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 36px;
+      margin-bottom: 40px;
+    }
+
+    .footer-heading {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* -------------------------------------------------------------
+       ANIMATIONS
+    ------------------------------------------------------------- */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.4;
+        transform: scale(0.85);
+      }
+    }
+
+    /* -------------------------------------------------------------
+       RESPONSIVE DESIGN
+    ------------------------------------------------------------- */
+    @media (max-width: 900px) {
+      .bento-col-8,
+      .bento-col-4,
+      .bento-col-6 {
+        grid-column: span 12;
+      }
+      .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+      .btn-pill {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <!-- ================= Apple-Style Navigation ================= -->
+  <header class="apple-nav">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" id="nav-brand-link">
+        <img src="assets/sakec-logo.jpg" alt="SAKEC Crest" class="brand-logo-img">
+        <span class="brand-title">SAKEC</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#overview" class="nav-link">Overview</a></li>
+          <li><a href="#campus" class="nav-link">Campus</a></li>
+          <li><a href="#labs" class="nav-link">Innovation</a></li>
+          <li><a href="#programs" class="nav-link">Programs</a></li>
+          <li><a href="#admissions" class="nav-link">Admissions</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" title="Toggle Monochrome Mode" aria-label="Toggle Monochrome Mode">
+          <span id="theme-icon">◐</span>
+        </button>
+        <a href="#contact" class="nav-btn" id="contact-nav-btn">Inquire</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= Hero Section ================= -->
+  <main>
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>EST. 1985 &bull; NAAC 'A' GRADE &bull; MUMBAI UNIVERSITY</span>
+        </div>
+
+        <h1 class="hero-title" id="main-heading">
+          Welcome to<br>
+          <span>Shah &amp; Anchor Kutchhi</span><br>
+          Engineering College
+        </h1>
+
+        <p class="hero-subtitle">
+          Where engineering rigor meets human imagination. A premier institution in Chembur, Mumbai shaping the architects of tomorrow’s technology.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#programs" class="btn-pill btn-primary" id="btn-explore-programs">
+            Explore Disciplines
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </a>
+          <button class="btn-pill btn-secondary" id="btn-open-exterior-lightbox" onclick="openLightbox('assets/campus-exterior.jpg', 'Shah and Anchor Kutchhi Engineering College — Chembur Campus Main Facade')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            View Campus Showcase
+          </button>
+        </div>
+
+        <!-- Hero Architectural Showcase -->
+        <div class="hero-frame-container" id="overview">
+          <div class="hero-frame" onclick="openLightbox('assets/campus-exterior.jpg', 'Shah and Anchor Kutchhi Engineering College — Architectural Exterior View')">
+            <img 
+              src="assets/campus-exterior.jpg" 
+              alt="Shah and Anchor Kutchhi Engineering College modern building facade" 
+              class="hero-img"
+              id="hero-campus-image"
+            >
+            <div class="hero-overlay-bar">
+              <div>
+                <div class="hero-overlay-title">Chembur Main Campus</div>
+                <div class="hero-overlay-subtitle">Waman Tukaram Patil Marg, Mumbai &bull; 7-Storey Engineering Complex</div>
+              </div>
+              <span class="hero-view-badge">Tap to expand</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Key Metrics Counter ================= -->
+    <section class="metrics-section">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <div class="metric-value">1985</div>
+            <div class="metric-label">Legacy of Excellence</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-value">A</div>
+            <div class="metric-label">NAAC Accredited (3.16 CGPA)</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-value">8+</div>
+            <div class="metric-label">Future-Proof Disciplines</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-value">100%</div>
+            <div class="metric-label">Research &amp; Placement Support</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Bento Grid Showcase ================= -->
+    <section class="container" id="campus">
+      <div class="section-header">
+        <div class="section-eyebrow">Precision Engineering</div>
+        <h2 class="section-title">Engineered to Inspire</h2>
+        <p class="section-desc">
+          State-of-the-art computational facilities, high-performance robotics suites, and an academic culture rooted in precision.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Bento 1: Advanced Labs (Large 8 Cols) -->
+        <div class="bento-card bento-col-8" id="labs">
+          <div class="card-media card-media-tall" onclick="openLightbox('assets/innovation-lab.jpg', 'Department of Computer Engineering — Advanced Robotics & AI Laboratory at SAKEC')">
+            <img src="assets/innovation-lab.jpg" alt="Advanced Robotics and AI Lab at SAKEC" class="card-img">
+          </div>
+          <div class="card-content">
+            <div>
+              <span class="card-tag">Research &amp; Prototyping</span>
+              <h3 class="card-title">Advanced Robotics &amp; AI Research Labs</h3>
+              <p class="card-body">
+                Equipped with cutting-edge robotic arms, computer vision clusters, and machine learning infrastructure enabling students to solve enterprise-scale engineering problems.
+              </p>
+            </div>
+            <a href="javascript:void(0)" onclick="openLightbox('assets/innovation-lab.jpg', 'Advanced Robotics & AI Research Lab')" class="card-link">
+              Explore lab facility
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bento 2: SAKEC Emblem / Identity (4 Cols) -->
+        <div class="bento-card bento-col-4">
+          <div class="card-media card-media-square" onclick="openLightbox('assets/sakec-logo.jpg', 'Official SAKEC Crest: Technical Gear of Progress, Torch of Knowledge, and Book of Wisdom')">
+            <img src="assets/sakec-logo.jpg" alt="Official SAKEC Crest Emblem" class="card-logo-img">
+          </div>
+          <div class="card-content">
+            <div>
+              <span class="card-tag">Heritage &bull; Mahavir Education Trust</span>
+              <h3 class="card-title">The SAKEC Insignia</h3>
+              <p class="card-body">
+                The gear symbolizes mechanical precision, the torch radiates the eternal light of knowledge, and the compass embodies technical perfection.
+              </p>
+            </div>
+            <span class="card-tag" style="margin: 0; color: var(--text-primary);">Mumbai, India</span>
+          </div>
+        </div>
+
+        <!-- Bento 3: Tech Auditorium (6 Cols) -->
+        <div class="bento-card bento-col-6">
+          <div class="card-media" onclick="openLightbox('assets/smart-hall.jpg', 'SAKEC Smart Auditorium — Host of National Hackathons and Tech Conclaves')">
+            <img src="assets/smart-hall.jpg" alt="SAKEC Smart Presentation Hall and Auditorium" class="card-img">
+          </div>
+          <div class="card-content">
+            <div>
+              <span class="card-tag">Academic Conclaves</span>
+              <h3 class="card-title">Digital Innovation Amphitheatre</h3>
+              <p class="card-body">
+                Acoustically tuned tiered presentation auditorium hosting tech symposiums, industry keynotes, and national coding hackathons.
+              </p>
+            </div>
+            <a href="javascript:void(0)" onclick="openLightbox('assets/smart-hall.jpg', 'Digital Innovation Amphitheatre')" class="card-link">
+              View gallery
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bento 4: Industry & Placement Excellence (6 Cols) -->
+        <div class="bento-card bento-col-6">
+          <div class="card-content" style="padding: 40px 32px; justify-content: center;">
+            <div>
+              <span class="card-tag">Global Pathways</span>
+              <h3 class="card-title" style="font-size: 1.6rem; margin-bottom: 14px;">Industry Leadership</h3>
+              <p class="card-body" style="font-size: 0.96rem; line-height: 1.6;">
+                Graduates from Shah &amp; Anchor Kutchhi Engineering College make their mark at global tech leaders including TCS, Capgemini, Morgan Stanley, L&amp;T Infotech, and innovative tech startups worldwide.
+              </p>
+              <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px;">
+                <span class="hero-view-badge" style="background: var(--border-subtle); color: var(--text-primary);">NBA Accredited Programs</span>
+                <span class="hero-view-badge" style="background: var(--border-subtle); color: var(--text-primary);">Active Placement Cell</span>
+                <span class="hero-view-badge" style="background: var(--border-subtle); color: var(--text-primary);">CSI &amp; ACM Chapters</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Academic Programs Section ================= -->
+    <section class="programs-section" id="programs">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Disciplines</div>
+          <h2 class="section-title">Undergraduate &amp; Research Programs</h2>
+          <p class="section-desc">
+            Rigorous undergraduate curricula affiliated with the University of Mumbai, approved by AICTE, and accredited by NBA.
+          </p>
+        </div>
+
+        <div class="programs-grid">
+          <div class="program-card">
+            <span class="program-code">DEPT-CS // 01</span>
+            <h4 class="program-name">Computer Engineering</h4>
+            <p class="program-desc">Algorithms, distributed systems, operating systems, cloud architecture, and full-stack software development.</p>
+          </div>
+
+          <div class="program-card">
+            <span class="program-code">DEPT-AI // 02</span>
+            <h4 class="program-name">Artificial Intelligence &amp; Data Science</h4>
+            <p class="program-desc">Deep neural networks, natural language processing, predictive analytics, and enterprise data pipelines.</p>
+          </div>
+
+          <div class="program-card">
+            <span class="program-code">DEPT-IT // 03</span>
+            <h4 class="program-name">Information Technology</h4>
+            <p class="program-desc">Enterprise database systems, web engineering, cloud security, network architecture, and applied informatics.</p>
+          </div>
+
+          <div class="program-card">
+            <span class="program-code">DEPT-SEC // 04</span>
+            <h4 class="program-name">Cyber Security</h4>
+            <p class="program-desc">Cryptographic protocols, threat vulnerability analysis, digital forensics, ethical hacking, and defense systems.</p>
+          </div>
+
+          <div class="program-card">
+            <span class="program-code">DEPT-EXTC // 05</span>
+            <h4 class="program-name">Electronics &amp; Telecommunication</h4>
+            <p class="program-desc">5G wireless communication systems, RF circuit design, signal processing, and IoT smart edge devices.</p>
+          </div>
+
+          <div class="program-card">
+            <span class="program-code">DEPT-VLSI // 06</span>
+            <h4 class="program-name">VLSI Design &amp; Technology</h4>
+            <p class="program-desc">Silicon chip architecture, FPGA design, semiconductor fabrication principles, and microelectronic systems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Contact & Location ================= -->
+    <section class="container" id="admissions" style="padding-bottom: 90px;">
+      <div class="bento-card" style="padding: 48px 36px; text-align: center; border-radius: var(--radius-xl);" id="contact">
+        <div style="max-width: 620px; margin: 0 auto;">
+          <span class="card-tag">Admissions &bull; 2026-2027</span>
+          <h2 class="card-title" style="font-size: clamp(1.8rem, 3.5vw, 2.4rem); margin-bottom: 16px;">
+            Join the Next Generation of Engineers
+          </h2>
+          <p class="card-body" style="font-size: 1rem; margin-bottom: 28px;">
+            Shah and Anchor Kutchhi Engineering College welcomes prospective students committed to technological excellence and ethical innovation.
+          </p>
+          <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+            <a href="mailto:info@sakec.ac.in" class="btn-pill btn-primary" id="btn-email-inquiry">
+              Contact Admissions (info@sakec.ac.in)
+            </a>
+            <a href="https://www.shahandanchor.com" target="_blank" rel="noopener" class="btn-pill btn-secondary" id="btn-official-portal">
+              Official SAKEC Portal
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Interactive Lightbox Modal ================= -->
+  <div class="lightbox-modal" id="lightbox-modal" onclick="closeLightbox(event)">
+    <div class="lightbox-container" onclick="event.stopPropagation()">
+      <button class="lightbox-close-btn" onclick="closeLightbox(event)" title="Close">&times;</button>
+      <img src="" alt="Enlarged view" class="lightbox-img" id="lightbox-image">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- ================= Apple-Style Footer ================= -->
+  <footer class="apple-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-heading">Shah &amp; Anchor Kutchhi Engineering College</div>
+          <p style="margin-bottom: 12px;">
+            Approved by AICTE, New Delhi &amp; DTE, Maharashtra. Affiliated to University of Mumbai. Awarded 'A' Grade by NAAC. Managed by Mahavir Education Trust.
+          </p>
+          <p>
+            Mahavir Education Trust Chowk, Waman Tukaram Patil Marg, Next to Dukes Co., Chembur, Mumbai - 400 088, Maharashtra, India.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-heading">Academics</div>
+          <ul class="footer-links">
+            <li><a href="#programs">Computer Engineering</a></li>
+            <li><a href="#programs">Artificial Intelligence</a></li>
+            <li><a href="#programs">Information Technology</a></li>
+            <li><a href="#programs">Cyber Security</a></li>
+            <li><a href="#programs">VLSI Design</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Campus Life</div>
+          <ul class="footer-links">
+            <li><a href="#labs">Robotics &amp; AI Labs</a></li>
+            <li><a href="#campus">Smart Auditorium</a></li>
+            <li><a href="#campus">Library &amp; Research</a></li>
+            <li><a href="#campus">Student Chapters</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Institution</div>
+          <ul class="footer-links">
+            <li><a href="https://www.shahandanchor.com" target="_blank" rel="noopener">Official Portal</a></li>
+            <li><a href="#overview">NAAC Accreditation</a></li>
+            <li><a href="#overview">NBA Certificates</a></li>
+            <li><a href="mailto:info@sakec.ac.in">Admissions Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          Copyright &copy; 2026 Shah &amp; Anchor Kutchhi Engineering College (SAKEC). All rights reserved.
+        </div>
+        <div style="display: flex; gap: 18px;">
+          <span>Monochrome Apple Design Edition</span>
+          <span>&bull;</span>
+          <span>Mumbai 400088</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= Inline Interactivity Script ================= -->
+  <script>
+    // Theme toggle (Dark Obsidian & Light Ceramic Monochrome)
+    const themeBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    let currentTheme = 'dark';
+
+    themeBtn.addEventListener('click', () => {
+      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.body.setAttribute('data-theme', currentTheme);
+      themeIcon.textContent = currentTheme === 'dark' ? '◐' : '◑';
+    });
+
+    // Lightbox Modal Controls
+    const modal = document.getElementById('lightbox-modal');
+    const modalImg = document.getElementById('lightbox-image');
+    const modalCaption = document.getElementById('lightbox-caption');
+
+    function openLightbox(src, caption) {
+      modalImg.src = src;
+      modalCaption.textContent = caption || '';
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+      if (e) e.stopPropagation();
+      modal.classList.remove('active');
+      modalImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    // Close on Escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+
+    // Console aesthetic signature
+    console.log('%c SAKEC %c Shah & Anchor Kutchhi Engineering College ', 
+      'background: #fff; color: #000; font-weight: bold; padding: 4px 8px; border-radius: 4px;',
+      'background: #111; color: #eee; padding: 4px 8px;'
+    );
+  </script>
+</body>
+</html>
